@@ -67,7 +67,7 @@ section {
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
-    text-align: right;
+    text-align: left;
 }
 
 .navbar__menu li {
@@ -115,7 +115,11 @@ section {
     padding: 1em;
     text-align: left;
 }
+li{
+    color : green;
+    padding: 1.5em;
 
+}
 @media only screen and (min-width: 35em){
     .landing__container {
         max-width: 50em;

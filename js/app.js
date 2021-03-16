@@ -18,13 +18,11 @@
  * 
 */
 const navbarMenu = document.getElementsByClassName("navbar__menu");
-
-const section_one = document.getElementById("section1");
-const section_two = document.getElementById("section2");
-const section_three = document.getElementById("section3");
-//const newLi = document.createElement('li');
-let liLists=["Section1", "Section2", "Section3"];
+let liLists=["Section-1", "Section-2", "Section-3"];
+const sections =['#section1','#section2','#section3'];
 const navUl = document.querySelector("ul");
+const sectionView = document.querySelectorAll('section');
+let vewPortHeight = window.innerHeight;
 
 /**
  * End Global Variables
@@ -35,45 +33,34 @@ function addLi(){
     
     for(let i = 0; i < liLists.length; i++){
        let liList= liLists[i];
+       let section = sections[i];
        const newLi = document.createElement('li');
-        newLi.textContent = liList;
-         newLi.style.color = "red";
-       //consule.log(liList[i]);
-        navUl.appendChild(newLi);
+        const a = document.createElement('a');
+        a.textContent = liList;
+        a.setAttribute('href', section);
+        newLi.appendChild(a);
+        a.style.cssText = "color : green; text-decoration: none; ";
+        navUl.appendChild(newLi);  
     }
-    //navUl.appendChild(newLi);
-    //document.body.appendChild(navUl);
-   
     
 }
+
+// this gives a uneq look for the section at the view port
+
+function activeSection(){
+sectionView.forEach((e) => {
+    window.addEventListener('scroll', function(){
+        if(e.getBoundingClientRect().top < vewPortHeight){
+            e.className = 'your-active-class';
+        }else{
+            e.className = 'new-class-name';
+        }
+
+    })
+});}
+
+
 addLi();
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
+activeSection()
 
 

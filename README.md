@@ -1,13 +1,3 @@
 # Landing Page Project
+This project is has some HTML, CSS to styling the static version of the landing page project the page has a JavaScript file that convert the page from static to interactive one. the JavaScript file creates the navigation menu of the page and gives it the functionallity of scrolling to the approperiate sections in the page.
 
-## Table of Contents
-
-* [Instructions](#instructions)
-
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
